@@ -22,7 +22,7 @@ DROP TABLE IF EXISTS test;
 /* Tab. test anlegen, falls noch nicht vorhanden*/
 CREATE TABLE IF NOT EXISTS test
 (
-    id INT NOT NULL,
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	name VARCHAR(20) NOT NULL DEFAULT "TBA",
 	age INT	NOT NULL DEFAULT 0
 );
@@ -34,12 +34,12 @@ SHOW TABLES;
 DESCRIBE test;
 
 /* ----- Daten ------- */
-INSERT INTO test(id,name,age) VALUES (1,"Grizabella",29);
-INSERT INTO test(id,age,name) VALUES (2,35,"Alonzo");
+INSERT INTO test(id,name,age) VALUES (DEFAULT,"Grizabella",29);
+INSERT INTO test(age,name) VALUES (35,"Alonzo");
 
 -- ABER: Doppelte Datensätze werden zugelassen !
-INSERT INTO test(id,age,name) VALUES (3,35,"Alonzo");
-INSERT INTO test(id,age,name) VALUES (3,35,"Alonzo");
+INSERT INTO test(id,age,name) VALUES (DEFAULT,35,"Alonzo");
+INSERT INTO test(id,age,name) VALUES (DEFAULT,35,"Alonzo");
 
 
 /* ---- Inhalte der Tabelle anzeigen (Ergebnistab.)---- */
