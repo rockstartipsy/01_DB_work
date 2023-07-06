@@ -15,7 +15,7 @@ Ausgabe beschränken
 -- hier mit Verknüpfung CONCAT() // String-Fkt.
 SELECT
    ticker AS "SYM",
-   price AS "Kurs in $",
+   #price AS "Kurs in $",
    c_name AS Unternehmen,
    #industry Branche
    concat( sector, " | ", industry) AS "Operations"
