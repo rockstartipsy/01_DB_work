@@ -5,8 +5,8 @@ SELECT
    ticker AS "SYM",
    price AS "Kurs in $",
    c_name AS Unternehmen,
-   no_yrs AS "Jahre ++"
-   #concat( sector, " | ", industry) AS "Operations"
+   no_yrs AS "Jahre ++",
+   concat( sector, " | ", industry) AS "Operations"
 FROM stocks.ccc
 
 -- Sortierung
@@ -15,10 +15,10 @@ FROM stocks.ccc
 
 #ORDER BY price ASC -- Kurs, numerisch, beginnend mit der günstigsten Aktie
 #ORDER BY price DESC -- Kurs, numerisch, beginnend mit der teuerste Aktie
-ORDER BY no_yrs DESC -- numerisch, Aktien mit der längsten Div.-Historie
+#ORDER BY no_yrs DESC -- numerisch, Aktien mit der längsten Div.-Historie
 
 #ORDER BY sector DESC,industry ASC  -- Kombination ASC / DESC alphabet.
-#ORDER BY no_yrs DESC, sector ASC  -- Kombination ASC / DESC  alphabet. / numerisch
+ORDER BY no_yrs DESC, sector ASC  -- Kombination ASC / DESC  alphabet. / numerisch
 
 -- Begrenzung 
 
