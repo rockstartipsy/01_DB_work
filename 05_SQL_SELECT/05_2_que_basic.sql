@@ -17,8 +17,8 @@ SELECT
    ticker AS "SYM",
    #price AS "Kurs in $",
    c_name AS Unternehmen,
-   #industry Branche
-   concat( sector, " | ", industry) AS "Operations"
+   industry Branche
+   #concat( sector, " | ", industry) AS "Operations"
 FROM stocks.ccc
 #LIMIT 200,10
 #LIMIT 1
